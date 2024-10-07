@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Captain Caption</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="html2canvas.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div id="background"></div>
+
+  <div class="container">
+    <div class="vStack">
+      <div class="hStack" style="margin: 0;">
+        <h1>Captain Caption</h1>
+        <p>v0.1</p>
+      </div>
+
+      <div class="fileUpload importantButton">
+        <input type="file" id="imageUploader" accept="image/*" />
+        <label for="imageUploader">Upload Image</label>
+      </div>
+
+      <div id="captionOptions" style="display: none;" class="vStack">
+        <input type="text" id="captionText" placeholder="Enter your caption" />
+        
+        <div class="hStack">
+          <label for="styleSelect">Style:</label>
+          <select id="styleSelect">
+            <option value="style-1">Glass</option>
+            <option value="style-2">Opaque</option>
+            <option value="style-3">Snapchat (less opaque)</option>
+          </select>
+
+          <label for="alignmentSelect">Alignment:</label>
+          <select id="alignmentSelect">
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+          </select>
+        </div>
+
+        <div class="hStack">
+          <label for="fontSelect">Font:</label>
+          <select id="fontSelect">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Times New Roman">Times New Roman</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="imageContainer" class="image-container" style="display: none;"></div>
+
+      <button id="exportBtn" class="importantButton" style="display: none;">Export</button>
+    </div>
+  </div>
+  <p>Note: as of now the glass theme blur does not work.</p>
+</body>
+</html>
